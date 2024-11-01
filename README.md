@@ -13,6 +13,7 @@ Este projeto é um painel de controle para uma cirurgia robótica fictícia, per
 - HTML
 - CSS
 - JavaScript
+- Python
 
 ## Como Usar
 
