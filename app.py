@@ -51,5 +51,24 @@ def reset():
         robotic_arm_position['z'] = 0
     return jsonify(robotic_arm_position)
 
+@app.route('/stop', methods=['POST'])
+def stop():
+    global robotic_arm_position
+    data = request.json
+    direction = data.get('direction')
+    if direction == 'up':
+        robotic_arm_position['y'] = 0
+    elif direction == 'down':
+        robotic_arm_position['y'] = 0
+    elif direction == 'left':
+        robotic_arm_position['x'] = 0
+    elif direction == 'right':
+        robotic_arm_position['x'] = 0
+    elif direction == 'forward':
+        robotic_arm_position['z'] = 0
+    elif direction == 'backward':
+        robotic_arm_position['z'] = 0
+    return jsonify(robotic_arm_position)
+
 if __name__ == '__main__':
     app.run(debug=True)
